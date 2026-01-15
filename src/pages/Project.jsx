@@ -3,7 +3,9 @@ import React from 'react'
 const Project = () => {
   return (
     <div>
-      
+      <h1>
+        Bonjour Project
+      </h1>
     </div>
   )
 }
