@@ -30,10 +30,14 @@ const Agence = () => {
     scrollTrigger:{
         trigger:imageDivRef.current,
        
-        start:'top 22%',
+        start:'top 28%',
         end:'top -100%',
-        scrub:true,
+        scrub:1,
         pin:true,
+        
+       
+      
+
         onUpdate:(elem)=>{
           let imageIndex;
           if(elem.progress<1) imageIndex = Math.floor(elem.progress*imageArray.length)
@@ -50,23 +54,28 @@ const Agence = () => {
     })
    })
 
+ 
+
+
 
 
 
 
   return (
  <div>
-    <div className="section1">
-      <div ref={imageDivRef} className="absolute overflow-hidden h-[20vw] rounded-4xl w-[15vw] top-40 left-[30vw] ">
+    <div className="section1  py-1 ">
+      <div ref={imageDivRef} className="absolute overflow-hidden h-[20vw] rounded-4xl w-[15vw] top-40 left-[30vw] py-0.5 ">
         <img ref={imageRef} className="h-full w-full object-cover" 
          src={img1}
 alt="" />
       </div>
 
+       
 
 
-      <div className="relative font-[font2] ">
-      <div className="mt-[55vh]">
+
+      <div className="relative font-[font2] py-1 ">
+      <div className="mt-[55vh] py-0.5">
         <h1 className="text-[19vw] text-center uppercase leading-[17vw] ">
           Soixan7e <br />
           Douze
@@ -95,7 +104,11 @@ alt="" />
       </div>
     </div>
 
-    <div className="section2 h-screen">
+  
+
+
+
+    <div className="section2  h-screen">
       
     </div>
 

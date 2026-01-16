@@ -8,8 +8,10 @@ import Stairs from './components/common/Stairs.jsx'
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-     <Stairs/>
+     <Stairs>
       <App />
+    </Stairs>
+      
     </BrowserRouter>
     
    
