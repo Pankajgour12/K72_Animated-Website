@@ -3,9 +3,20 @@ import { Link } from 'react-router-dom'
 
 const HomeBottom = () => {
   return (
-    <div className='flex flex-col pt-6 ' >
-      <div className='self-end mr-6'>
+  
+
+
+     <div className='flex flex-col pt-6 ' >
+      <div className='self-end mr-8'>
         <p className='text-start  text-[1vw] font-[font2] '>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
        
          K72 est une agence qui pense
          <br /> chaque action pour nourrir la marque.
@@ -20,13 +31,15 @@ const HomeBottom = () => {
 
 
       <div className='flex font-[font1]  items-center justify-center gap-2 mt-6'>
-        <Link className='text-[6.5vw] leading-[5.5vw] mt-6 border-white rounded-full px-14 py-2  uppercase border-4 '  to='/project'>Project</Link>
-        <Link className='text-[6.5vw] leading-[5.5vw] mt-6 border-white rounded-full px-14 py-2  uppercase border-4 '  to='/agence'>Agence</Link>
+        <Link className='text-[6.5vw] leading-[5.5vw] mt-6 border-white hover:text-[#D3FD50] hover:border-[#D3FD50]  rounded-full px-14 py-2  uppercase border-4 '  to='/project'>Project</Link>
+        <Link className='text-[6.5vw] leading-[5.5vw] mt-6 border-white hover:text-[#D3FD50] hover:border-[#D3FD50]  rounded-full px-14 py-2  uppercase border-4 '  to='/agence'>Agence</Link>
        
       </div>
       
       
     </div>
+
+  
   )
 }
 
