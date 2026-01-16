@@ -6,10 +6,21 @@ import img1 from '../assets/1.jpg'
 import img2 from '../assets/2.jpg'
 import img3 from '../assets/3.jpg'
 import img4 from '../assets/4.jpg'
+import img5 from '../assets/5.jpg'
+import img6 from '../assets/6.jpg'
+import img7 from '../assets/7.jpg'
+import img8 from '../assets/8.jpg'
+
+
 
 const Agence = () => {
 
    const imageDivRef = useRef(null);
+   const imageRef = useRef(null);
+
+   const imageArray = [img1,img2,img3,img4,img5,img6,img7,img8,img3,img4,img5,img6,img7,img8]
+
+
    gsap.registerPlugin(ScrollTrigger);
 
    useGSAP(function(){
@@ -22,7 +33,16 @@ const Agence = () => {
         start:'top 22%',
         end:'top -100%',
         scrub:true,
-        pin:true
+        pin:true,
+        onUpdate:(elem)=>{
+          let imageIndex;
+          if(elem.progress<1) imageIndex = Math.floor(elem.progress*imageArray.length)
+          else imageIndex = imageArray.length-1
+          imageRef.current.src = imageArray[imageIndex]
+          
+          
+
+        }
       }
       
       
@@ -38,7 +58,7 @@ const Agence = () => {
  <div>
     <div className="section1">
       <div ref={imageDivRef} className="absolute overflow-hidden h-[20vw] rounded-4xl w-[15vw] top-40 left-[30vw] ">
-        <img className="h-full w-full object-cover" 
+        <img ref={imageRef} className="h-full w-full object-cover" 
          src={img1}
 alt="" />
       </div>
