@@ -29,7 +29,7 @@ const Agence = () => {
      
     scrollTrigger:{
         trigger:imageDivRef.current,
-        markers:true,
+       
         start:'top 22%',
         end:'top -100%',
         scrub:true,
