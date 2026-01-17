@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import nav1 from '../../assets/nav1.jpg'
 import nav2 from '../../assets/nav1.png'
 import nav3 from '../../assets/nav3.jpg'
 import nav4 from "../../assets/nav4.png"
 import nav5 from "../../assets/nav1.png"
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 
 
@@ -11,11 +13,58 @@ import nav5 from "../../assets/nav1.png"
 
 
 const FullScreenNav = () => {
+   const fullNavLinksRef = useRef(null)
+
+   useGSAP(function(){
+    const tl = gsap.timeline()
+
+    tl.from('.stairing',{
+      delay:1,
+      height:0,
+      stagger:{
+        amount:-0.2
+
+      }})
+
+    tl.from(fullNavLinksRef.current,{
+      opacity:0
+    })
+
+    
+
+
+
+
+   })
+
+
+ 
+
+ 
+
+
+
+   
+
+
   return (
-    <div className='h-screen overflow-hidden  w-full absolute text-white' >
+    <div className='h-screen overflow-hidden  w-full  text-white absolute' >
       
+      <div className='h-screen w-full fixed '>
+        <div className="h-full w-full flex">
+            <div className='stairing h-full w-1/5 bg-black'> </div>
+            <div className='stairing h-full w-1/5 bg-black'> </div>
+            <div className='stairing h-full w-1/5 bg-black'> </div>
+            <div className='stairing h-full w-1/5 bg-black'> </div>
+            <div className='stairing h-full w-1/5 bg-black'> </div>
+
+        </div>
       
-       <div>
+         </div>
+
+
+      
+       <div ref={fullNavLinksRef} className='relative '>
         <div className='flex w-full justify-between p-3 items-start'>
         <div className=''>
           <div className='w-28'>
@@ -150,6 +199,7 @@ className='w-full'
        
 
 
+       
        </div>
        </div>
     </div>
