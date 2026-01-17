@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useRef } from 'react'
 const Navbar = () => {
+    const navGreenRef = useRef(null)
+
+
   return (
     <div className='z-5 flex fixed top-0 w-full  justify-between '>
 
@@ -22,11 +25,20 @@ className='w-full'
           </div>        
 
             
-           <div className='relative bg-black h-12 w-64'>
+           {/* <div 
+           onMouseEnter={()=>{
+            navGreenRef.current.style.height = '100%'
+           }}
+            onMouseLeave={()=>{
+            navGreenRef.current.style.height = '0%'
+
+            }}
+
+           className='relative bg-black h-12 w-64'>
                   
                  
 
-                  <div className='absolute top-0  bg-[#D3FD50]  w-full'>
+                  <div ref={navGreenRef} className='absolute top-0  bg-[#D3FD50] transition-all  w-full'>
 
                   
               
@@ -36,7 +48,34 @@ className='w-full'
              
 
                   <div className='relative'></div>
-           </div>
+           </div> */}
+           <div
+  onMouseEnter={() => {
+    navGreenRef.current.style.height = '100%'
+  }}
+  onMouseLeave={() => {
+    navGreenRef.current.style.height = '0%'
+  }}
+  className="relative bg-black h-12 w-64 overflow-hidden"
+>
+
+  {/* GREEN OVERLAY */}
+  <div
+    ref={navGreenRef}
+    className="absolute top-0 left-0 w-full h-0 bg-[#D3FD50] transition-all duration-300 z-10"
+  />
+
+  {/* TWO LINES */}
+  <div className="absolute right-12 top-1/2 -translate-y-1/2 flex flex-col gap-1 z-20 pointer-events-none">
+    <span className="block w-10 h-[2px] bg-white transition-colors opacity-80 duration-300"></span>
+    <span className="block w-5 h-[2px] bg-white self-end opacity-80 transition-colors duration-300"></span>
+  </div>
+
+
+ 
+
+</div>
+
            
 
 
