@@ -10,11 +10,12 @@ const Stairs = (props) => {
 
     const stairParentRef = useRef(null)
 
- useGSAP(function(){
+  useGSAP(function(){
     const tl = gsap.timeline()
 
-    tl.to(stairParentRef.current,{
+    tl.set(stairParentRef.current,{
         display:'block'
+       
 
     })
     tl.from('.stair',{
@@ -35,10 +36,10 @@ const Stairs = (props) => {
 
     })
 
-    tl.to(stairParentRef.current,{
+    tl.set(stairParentRef.current,{
         display:'none'
     })
-    tl.to('.stair',{
+    tl.set('.stair',{
         y:'0%'
     })
 
@@ -47,19 +48,19 @@ const Stairs = (props) => {
     gsap.from(pageRef.current,{
 
         opacity:0,
-        duration:1.2,
+        duration:1,
+        
        
         
     })
 
- },[currentPath])
-
+ },[currentPath]) 
 
 
 
   return (
     <div>
-        <div ref={stairParentRef} className='h-screen w-full fixed z-20 top-0'>
+        <div ref={stairParentRef} className='h-full w-full fixed z-20 top-0'>
         <div className="h-full w-full flex">
             <div className='stair h-full w-1/5 bg-black'> </div>
             <div className='stair h-full w-1/5 bg-black'> </div>
@@ -73,8 +74,8 @@ const Stairs = (props) => {
 
 
         <div ref={pageRef} >
-  {props.children}
-</div>
+          {props.children}
+          </div>
 
 
 

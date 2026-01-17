@@ -1,8 +1,7 @@
 import React from 'react'
-
 const Navbar = () => {
   return (
-    <div className='z-5 flex fixed top-0 w-full items-center justify-between '>
+    <div className='z-5 flex fixed top-0 w-full  justify-between '>
 
          <div className='p-3'>
           <div className='w-28'>
@@ -22,11 +21,24 @@ className='w-full'
           </div>
           </div>        
 
+            
+           <div className='relative bg-black h-12 w-64'>
+                  
+                 
 
-             <div className='bg-black top-0 h-16 w-96'>
-                      
+                  <div className='absolute top-0  bg-[#D3FD50]  w-full'>
 
-            </div>
+                  
+              
+                  
+                  </div>
+
+             
+
+                  <div className='relative'></div>
+           </div>
+           
+
 
     </div>
   )
