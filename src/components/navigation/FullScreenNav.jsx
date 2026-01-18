@@ -20,48 +20,126 @@ const FullScreenNav = () => {
    const [navOpen, setNavOpen] = useContext(NavbarContext)
   //  console.log(navOpen ,setNavOpen);
 
-   useGSAP(function(){
-    const tl = gsap.timeline()
+  //  useGSAP(function(){
+  //   const tl = gsap.timeline()
 
     
 
-    tl.from('.stairing',{
+  //   tl.from('.stairing',{
+      
+  //     height:0,
+  //     stagger:{
+  //       amount:-0.2
+  //     }
+  //   })
+
+  //   tl.from(fullNavLinksRef.current,{
+  //     opacity:0
+  //   })
+
+  //   tl.from('.link',{
+  //     opacity:0,
+  //     rotateX:90,
+  //     stagger:{
+  //       amount:0.2
+  //     }
+
+
+  //   })
+
+  //   tl.pause()
+
+  //   if(navOpen){
+  //      fullScreenRef.current.style.display='block'
+  //     tl.play()
+  //   }else{
+  //      fullScreenRef.current.style.display='none'
+
+  //     tl.reverse()
+  //   }
+
+    
+
+
+  //  },[navOpen])
+  
+  function gsapAnimation(){
+    const tl = gsap.timeline()
+      tl.to('.fullscreennav',{
+        display:'block'
+      }
+    )
+    tl.to('.stairing',{
+      delay:0.2,
+      height:'100%',
+      stagger:{
+        amount:-0.3
+      }})
+      tl.to('.link',{
+        opacity:1,
+        rotateX:0,
+        stagger:{
+          amount:0.3
+        }})
+
+      tl.to('.navlink',{
+        opacity:1
+
+      }) 
+
+
+
+    
+  }
+
+  function gsapAnimationReverse(){
+     const tl = gsap.timeline()
+      tl.to('.link',{
+        opacity:0,
+        rotateX:90,
+        stagger:{
+          amount:0.1
+        }})
+
+    tl.to('.stairing',{
       
       height:0,
       stagger:{
-        amount:-0.2
-      }
-    })
+        amount:0.1
+      }})
+      
 
-    tl.from(fullNavLinksRef.current,{
-      opacity:0
-    })
+      tl.to('.navlink',{
+        opacity:0
 
-    tl.from('.link',{
-      opacity:0,
-      rotateX:90,
-      stagger:{
-        amount:0.2
-      }
+      }) 
+     tl.to('.fullscreennav',{
+        display:'none',
+        
+       
+      })
 
 
-    })
-
-    tl.pause()
-
-    if(navOpen){
-       fullScreenRef.current.style.display='block'
-      tl.play()
-    }else{
-       fullScreenRef.current.style.display='none'
-
-      tl.reverse()
-    }
 
     
+  }
 
 
- },[navOpen])
+  useGSAP(function(){
+    if(navOpen){
+       document.body.style.overflow = 'hidden'
+    
+      gsapAnimation()
+    }else{
+       document.body.style.overflow = ''
+
+      gsapAnimationReverse()
+    }
+     return () =>{
+       document.body.style.overflow = ''
+     }
+  
+  },[navOpen])
 
 
  
@@ -74,8 +152,8 @@ const FullScreenNav = () => {
 
 
   return (
-    <div ref={fullScreenRef} id='fullscreennav' className='hidden absolute h-screen overflow-hidden z-50 w-full  text-white' >
-      
+    <div ref={fullScreenRef} id='fullscreennav' className='fullscreennav fixed inset-0 overflow-hidden z-50 w-full  text-white' >
+
       <div className='h-screen w-full fixed '>
         <div className=" h-full w-full flex">
             <div className='stairing h-full w-1/5 bg-black'> </div>
@@ -91,7 +169,7 @@ const FullScreenNav = () => {
 
       
        <div ref={fullNavLinksRef} className='relative'>
-        <div className='flex w-full justify-between p-3 items-start'>
+        <div className='navlink flex w-full justify-between p-3 items-start'>
         <div className=''>
           <div className='w-28'>
           <svg
@@ -114,14 +192,14 @@ className='w-full'
           onClick={()=>{
             setNavOpen(false)
           }}
-          className="relative h-28 w-28 cursor-pointer group">
+          className="relative h-24 w-24 cursor-pointer group">
   
-  <div className="h-40 w-0.5 -rotate-45 origin-top bg-white absolute 
+  <div className="h-36 w-0.5 -rotate-45 origin-top bg-white absolute 
                   transition-colors duration-300 
                   group-hover:bg-[#d3fd50]">
   </div>
 
-  <div className="h-40 w-0.5 rotate-45 right-0 absolute origin-top bg-white 
+  <div className="h-36 w-0.5 rotate-45 right-0 absolute origin-top bg-white 
                   transition-colors duration-300 
                   group-hover:bg-[#d3fd50]">
   </div>
