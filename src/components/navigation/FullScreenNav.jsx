@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import nav1 from '../../assets/nav1.jpg'
 import nav2 from '../../assets/nav1.png'
 import nav3 from '../../assets/nav3.jpg'
@@ -6,6 +6,7 @@ import nav4 from "../../assets/nav4.png"
 import nav5 from "../../assets/nav1.png"
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { NavbarContext } from '../../context/NavContext'
 
 
 
@@ -14,12 +15,18 @@ import gsap from 'gsap'
 
 const FullScreenNav = () => {
    const fullNavLinksRef = useRef(null)
+   const fullScreenRef = useRef(null)
+
+   const [navOpen, setNavOpen] = useContext(NavbarContext)
+  //  console.log(navOpen ,setNavOpen);
 
    useGSAP(function(){
     const tl = gsap.timeline()
 
+    
+
     tl.from('.stairing',{
-      delay:1,
+      
       height:0,
       stagger:{
         amount:-0.2
@@ -40,14 +47,21 @@ const FullScreenNav = () => {
 
     })
 
+    tl.pause()
 
+    if(navOpen){
+       fullScreenRef.current.style.display='block'
+      tl.play()
+    }else{
+       fullScreenRef.current.style.display='none'
+
+      tl.reverse()
+    }
 
     
 
 
-
-
-   })
+ },[navOpen])
 
 
  
@@ -60,7 +74,7 @@ const FullScreenNav = () => {
 
 
   return (
-    <div className='absolute h-screen overflow-hidden  w-full  text-white' >
+    <div ref={fullScreenRef} id='fullscreennav' className='hidden absolute h-screen overflow-hidden z-50 w-full  text-white' >
       
       <div className='h-screen w-full fixed '>
         <div className=" h-full w-full flex">
@@ -96,7 +110,11 @@ className='w-full'
           </div>
           </div>
 
-          <div className="relative h-28 w-28 cursor-pointer group">
+          <div 
+          onClick={()=>{
+            setNavOpen(false)
+          }}
+          className="relative h-28 w-28 cursor-pointer group">
   
   <div className="h-40 w-0.5 -rotate-45 origin-top bg-white absolute 
                   transition-colors duration-300 
