@@ -13,9 +13,7 @@
 }
 
 
-body{
-  background: #000;
-}
+
 
 .moveX{
   animation-name: moveAnimation;

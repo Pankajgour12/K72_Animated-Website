@@ -23,12 +23,24 @@ const FullScreenNav = () => {
       height:0,
       stagger:{
         amount:-0.2
-
-      }})
+      }
+    })
 
     tl.from(fullNavLinksRef.current,{
       opacity:0
     })
+
+    tl.from('.link',{
+      opacity:0,
+      rotateX:90,
+      stagger:{
+        amount:0.2
+      }
+
+
+    })
+
+
 
     
 
@@ -48,10 +60,10 @@ const FullScreenNav = () => {
 
 
   return (
-    <div className='h-screen overflow-hidden  w-full  text-white absolute' >
+    <div className='absolute h-screen overflow-hidden  w-full  text-white' >
       
       <div className='h-screen w-full fixed '>
-        <div className="h-full w-full flex">
+        <div className=" h-full w-full flex">
             <div className='stairing h-full w-1/5 bg-black'> </div>
             <div className='stairing h-full w-1/5 bg-black'> </div>
             <div className='stairing h-full w-1/5 bg-black'> </div>
@@ -64,7 +76,7 @@ const FullScreenNav = () => {
 
 
       
-       <div ref={fullNavLinksRef} className='relative '>
+       <div ref={fullNavLinksRef} className='relative'>
         <div className='flex w-full justify-between p-3 items-start'>
         <div className=''>
           <div className='w-28'>
@@ -104,7 +116,7 @@ className='w-full'
        </div>
       
        <div className='py-4' >
-        <div className='link relative  border-t  border-white'>
+        <div className='link origin-top relative  border-t  border-white'>
             <h1 className='font-[font2] text-[7.5vw] text-center leading-[0.8] py-2 pt-4 uppercase '>Projects</h1>
             <div className='moveLink absolute flex top-0 bg-[#d3fd50] text-black'>
                 <div className='moveX flex items-center  '>
@@ -127,7 +139,7 @@ className='w-full'
 
         </div>
 
-        <div className='link relative  border-t  border-white'>
+        <div className='link origin-top relative  border-t  border-white'>
             <h1 className='font-[font2] text-[7.5vw] text-center leading-[0.8] py-2 pt-4 uppercase '>Agence</h1>
             <div className='moveLink absolute flex top-0 bg-[#d3fd50] text-black'>
                 <div className='moveX flex items-center  '>
@@ -150,7 +162,7 @@ className='w-full'
 
         </div>
 
-        <div className='link relative  border-t  border-white'>
+        <div className='link origin-top relative  border-t  border-white'>
             <h1 className='font-[font2] text-[7.5vw] text-center leading-[0.8] py-2 pt-4 uppercase '>Contact</h1>
             <div className='moveLink absolute flex top-0 bg-[#d3fd50] text-black'>
                 <div className='moveX flex items-center  '>
@@ -173,7 +185,7 @@ className='w-full'
 
         </div>
 
-        <div className='link relative  border-t border-b  border-white'>
+        <div className='link origin-top relative  border-t border-b  border-white'>
             <h1 className='font-[font2] text-[7.5vw] text-center leading-[0.8] py-2 pt-4 uppercase '>Blogue</h1>
             <div className='moveLink absolute flex top-0 bg-[#d3fd50] text-black'>
                 <div className='moveX flex items-center  '>

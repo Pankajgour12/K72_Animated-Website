@@ -10,10 +10,10 @@ const App = () => {
   return (
     <div className='text-white'>
       
+       <Navbar/>
       <FullScreenNav/>
       
 
-       {/* <Navbar/>
       
       <Routes>
         <Route path='/' element={<Home/>} />
@@ -22,7 +22,7 @@ const App = () => {
 
 
 
-      </Routes> */}
+      </Routes>
 
 
     </div>
