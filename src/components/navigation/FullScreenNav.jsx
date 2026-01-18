@@ -18,7 +18,7 @@ const FullScreenNav = () => {
    const fullScreenRef = useRef(null)
 
    const [navOpen, setNavOpen] = useContext(NavbarContext)
-  //  console.log(navOpen ,setNavOpen);
+   console.log(navOpen ,setNavOpen);
 
    useGSAP(function(){
     const tl = gsap.timeline()
