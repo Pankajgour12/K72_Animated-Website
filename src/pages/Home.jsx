@@ -8,10 +8,10 @@ const Home = () => {
     <div>
      
 
-     <div className='h-screen w-screen fixed '>
+     <div className='h-screen w-full fixed '>
       <Video/>
      </div>
-    <div className='h-screen w-screen relative flex flex-col'>
+    <div className='h-screen w-full relative flex flex-col'>
       
    <HomeHero />
    <HomeBottom/>
