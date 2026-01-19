@@ -6,7 +6,7 @@ const HomeBottom = () => {
   
 
 
-     <div className='flex flex-col pt-3 ' >
+     <div className='flex flex-col pt-3' >
       <div className='self-end mr-8'>
         <p className='text-start  text-[1vw] font-[font2] '>
           &nbsp;
@@ -27,9 +27,6 @@ const HomeBottom = () => {
           on fait ce qui doit être fait.
       </p>
       </div>
-
-
-
       <div className='flex font-[font1]  items-center justify-center gap-2'>
         <Link className='text-[6.5vw] leading-[5.5vw] mt-6 border-white hover:text-[#D3FD50] hover:border-[#D3FD50]  rounded-full px-14 py-2  uppercase border-4 '  to='/project'>Project</Link>
         <Link className='text-[6.5vw] leading-[5.5vw] mt-6 border-white hover:text-[#D3FD50] hover:border-[#D3FD50]  rounded-full px-14 py-2  uppercase border-4 '  to='/agence'>Agence</Link>
