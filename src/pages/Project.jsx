@@ -15,11 +15,15 @@ import ProjectCard from '../components/project/ProjectCard.jsx'
  import p13 from '../assets/p13.jpg'
  import p14 from '../assets/p14.jpg'
  import p15 from '../assets/p15.jpg'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
  
 
 
 
 const Project = () => {
+  
+
 const projects = [
   {
     image1: nav1,
@@ -56,18 +60,76 @@ const projects = [
 
 ]
 
+
+
+
+
+
+ useGSAP(() => {
+  gsap.utils.toArray('.hero').forEach((card) => {
+    gsap.from(card, {
+      height: '100px',
+      stagger:{
+      amount:0.4
+     },          
+      scrollTrigger: {
+        trigger: card,         
+        start: 'top 100%',      
+        end: 'top -150%',         
+        scrub: 1,
+        pin: true,
+        markers: true,
+      },
+    })
+  })
+}) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className='p-4 text-black'>
-      <div className='pt-[42vh]' >
-        <h2 className='font-[font2] text-[13vw] uppercase '> projets</h2>
+      <div className='mt-[40vh]' >
+        <h2 className='font-[font2] text-[13vw]  uppercase '> projets</h2>
       </div>
 
-      <div className='-mt-20'>
-       {projects.map(function(elem){
-        return <ProjectCard image1={elem.image1} image2={elem.image2}/>
+      
+
+
+
+      
+      <div className='-mt-20 lol '>
+        {projects.map(function(elem,index){
+        return <div key={index} className='hero overflow-hidden w-full mb-4 flex gap-4' >
+        <ProjectCard image1={elem.image1} image2={elem.image2}/>
+        </div>
        })}
-        
-      </div>
+  
+</div>
+
      
 
     </div>
@@ -75,3 +137,5 @@ const projects = [
 }
 
 export default Project
+
+        
