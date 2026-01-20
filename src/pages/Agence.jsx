@@ -84,7 +84,7 @@ const Agence = () => {
       </div>
 
       <div className="lg:pl-[45%] font-[font2] mt-30 lg:mt-10">
-        <p className="lg:text-5xl text-2xl text-start px-4  "> 
+        <p className="lg:text-5xl text-2xl text-start px-4 leading-tight  "> 
           &nbsp;
           &nbsp;
           &nbsp;
