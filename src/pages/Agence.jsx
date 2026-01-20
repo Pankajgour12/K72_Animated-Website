@@ -64,10 +64,10 @@ const Agence = () => {
   return (
  <div>
     <div className="section1 relative text-black  py-1 ">
-      <div ref={imageDivRef} className="absolute overflow-hidden h-[20vw] rounded-4xl w-[15vw] top-40 left-[30vw] py-0.5 ">
+      <div ref={imageDivRef} className="absolute overflow-hidden lg:h-[20vw] h-[40vw] w-[30vw] rounded-4xl lg:w-[15vw] top-50 lg:left-[30vw] left-[20vw] py-0.5 ">
         <img ref={imageRef} className="h-full w-full object-cover" 
          src={img1}
-alt="" />
+        alt="" />
       </div>
 
        
@@ -75,16 +75,16 @@ alt="" />
 
 
       <div className="relative font-[font2] py-1 ">
-      <div className="mt-[55vh] py-0.5">
-        <h1 className="text-[19vw] text-center uppercase leading-[17vw] ">
+      <div className="lg:mt-[55vh] mt-[31vh] py-0.5">
+        <h1 className="text-[18vw] text-center uppercase leading-[17vw] ">
           Soixan7e <br />
           Douze
         </h1>
         
       </div>
 
-      <div className="lg:pl-[45%] font-[font1] mt-10">
-        <p className="lg:text-5xl px-4  "> 
+      <div className="lg:pl-[45%] font-[font2] mt-30 lg:mt-10">
+        <p className="lg:text-5xl text-2xl text-start px-4  "> 
           &nbsp;
           &nbsp;
           &nbsp;
@@ -105,10 +105,10 @@ alt="" />
 
 
 
-<div className="section2 text-black px-6 md:px-40 py-24 font-[font2]">
+<div className="section2 relative z-10 text-black px-6 md:px-40 py-24 font-[font2]">
 
  
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 mb-5 lg:mb-40">
+  <div className="grid grid-cols-2  gap-y-10 mb-10 lg:mb-40">
     
    
     <h2 className="text-3xl">Expertise</h2>

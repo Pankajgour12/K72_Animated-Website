@@ -8,8 +8,8 @@ const Navbar = () => {
   return (
     <div className='z-20 flex fixed top-0 w-full  justify-between '>
 
-         <div className='p-3'>
-          <div className='w-28'>
+         <div className='lg:p-3 p-1'>
+          <div className='lg:w-28 w-20'>
           <svg
 className='w-full'
   xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ className='w-full'
   onMouseLeave={() => {
     navGreenRef.current.style.height = '0%'
   }}
-  className="relative bg-black h-12 w-64 overflow-hidden"
+  className="relative bg-black h-12 lg:w-64 w-50 cursor-pointer overflow-hidden"
 >
 
   
