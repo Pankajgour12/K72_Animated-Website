@@ -11,7 +11,7 @@ const NavContext = ({ children }) => {
     const [navOpen, setNavOpen] = useState(false)
 
     const locate = useLocation().pathname
-    console.log(locate);
+   
 
     useEffect(function(){
         if(locate == '/project' || locate == '/agence'){

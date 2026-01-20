@@ -4,6 +4,7 @@ import nav2 from '../../assets/nav1.png'
 import nav3 from '../../assets/nav3.jpg'
 import nav4 from "../../assets/nav4.png"
 import nav5 from "../../assets/nav1.png"
+import blank from "../../assets/blank.jpg"
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { NavbarContext } from '../../context/NavContext'
@@ -240,15 +241,15 @@ className='w-full'
             <div className='moveLink absolute flex top-0 bg-[#d3fd50] text-black'>
                 <div className='moveX flex items-center  '>
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase '>Pour Tour savoir</h2>
-                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav1} alt="" />
+                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav3} alt="" />
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase ' >Pour Tour savoir</h2>
-                     <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav2} alt="" />
+                     <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav4} alt="" />
                 </div>
                 <div className='moveX flex items-center  '>
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase '>Pour Tour savoir</h2>
-                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav1} alt="" />
+                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav3} alt="" />
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase ' >Pour Tour savoir</h2>
-                     <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav2} alt="" />
+                     <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav4} alt="" />
                 </div>
 
 
@@ -262,13 +263,13 @@ className='w-full'
             <div className='moveLink absolute flex top-0 bg-[#d3fd50] text-black'>
                 <div className='moveX flex items-center  '>
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase '>Pour envoyer un fax </h2>
-                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav1} alt="" />
+                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav5} alt="" />
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase ' >Pour envoyer un fax </h2>
                      <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav2} alt="" />
                 </div>
                 <div className='moveX flex items-center  '>
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase '>Pour envoyer un fax </h2>
-                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav1} alt="" />
+                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav5} alt="" />
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase ' >Pour envoyer un fax </h2>
                      <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav2} alt="" />
                 </div>
@@ -284,15 +285,15 @@ className='w-full'
             <div className='moveLink absolute flex top-0 bg-[#d3fd50] text-black'>
                 <div className='moveX flex items-center  '>
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase '>Pour Tour voir</h2>
-                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav1} alt="" />
+                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav4} alt="" />
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase ' >Pour Tour voir</h2>
-                     <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav2} alt="" />
+                     <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={blank} alt="" />
                 </div>
                 <div className='moveX flex items-center  '>
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase '>Pour Tour voir</h2>
-                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav1} alt="" />
+                    <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav4} alt="" />
                     <h2 className='whitespace-nowrap text-[13vw] font-[font2] lg:text-[7.5vw] text-center lg:leading-[0.8] lg:py-2 lg:pt-4  uppercase ' >Pour Tour voir</h2>
-                     <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={nav2} alt="" />
+                     <img className='lg:h-20 h-12 lg:w-52 mb-1 w-35 object-cover shrink-0 rounded-full ' src={blank} alt="" />
                 </div>
 
 
