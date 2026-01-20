@@ -20,6 +20,8 @@ import { ScrollTrigger } from 'gsap/all'
 const Project = () => {
   
 
+
+
 const projects = [
   {
     image1: nav1,
@@ -97,7 +99,7 @@ const projects = [
 
         {
           projects.map(function(elem , idx){
-         return  <div key={idx} className='hero w-full  lg:h-[520px] mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2'> 
+         return  <div key={idx} className='hero w-full lg:h-[520px] h-[800px]   mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2'> 
              
              <ProjectCard  image1={elem.image1} image2={elem.image2}/>
 
