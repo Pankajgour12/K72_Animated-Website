@@ -6,8 +6,8 @@ const HomeBottom = () => {
   
 
 
-     <div className='flex flex-col pt-3' >
-      <div className=' self-end  mr-8'>
+     <div className='flex flex-col pt-15 lg:pt-3' >
+      <div className=' self-end mr-1 lg:mr-8'>
         <p className='text-start text-sm  lg:text-[1vw] font-[font2] '>
           &nbsp;
           &nbsp;
@@ -28,8 +28,8 @@ const HomeBottom = () => {
       </p>
       </div>
       <div className='flex font-[font1] pt-10 items-center justify-center gap-2'>
-        <Link className='lg:text-[6.5vw]  lg:leading-[5.5vw] mt-6 border-white hover:text-[#D3FD50] hover:border-[#D3FD50]  rounded-full lg:px-14 lg:py-2 px-5 uppercase lg:border-4 border-2 '  to='/project'>Project</Link>
-        <Link className='lg:text-[6.5vw]  lg:leading-[5.5vw] mt-6 border-white hover:text-[#D3FD50] hover:border-[#D3FD50]  rounded-full lg:px-14 lg:py-2 px-5 uppercase lg:border-4 border-2'  to='/agence'>Agence</Link>
+        <Link className='lg:text-[6.5vw]  lg:leading-[5.5vw] mt-6 border-white hover:text-[#D3FD50] hover:border-[#D3FD50]  rounded-full lg:px-14 lg:py-2 px-8 py-1   uppercase lg:border-4 border-2 '  to='/project'>Project</Link>
+        <Link className='lg:text-[6.5vw]  lg:leading-[5.5vw] mt-6 border-white hover:text-[#D3FD50] hover:border-[#D3FD50]  rounded-full lg:px-14 lg:py-2 px-8 py-1 uppercase lg:border-4 border-2'  to='/agence'>Agence</Link>
        
       </div>
       

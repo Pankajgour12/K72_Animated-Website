@@ -63,7 +63,7 @@ const Agence = () => {
 
   return (
  <div>
-    <div className="section1 relative bg-black  py-1 ">
+    <div className="section1 relative text-black  py-1 ">
       <div ref={imageDivRef} className="absolute overflow-hidden h-[20vw] rounded-4xl w-[15vw] top-40 left-[30vw] py-0.5 ">
         <img ref={imageRef} className="h-full w-full object-cover" 
          src={img1}
@@ -83,8 +83,8 @@ alt="" />
         
       </div>
 
-      <div className="pl-[45%] font-[font1] mt-10">
-        <p className="text-5xl "> 
+      <div className="lg:pl-[45%] font-[font1] mt-10">
+        <p className="lg:text-5xl px-4  "> 
           &nbsp;
           &nbsp;
           &nbsp;
@@ -95,10 +95,7 @@ alt="" />
           &nbsp;
           &nbsp;
           &nbsp;
-          
-         
-          
-          Notre curiosité nourrit notre créativité. On reste humbles et on dit non aux gros egos, même le vôtre. Une marque est vivante. Elle a des valeurs, une personnalité, une histoire. Si on oublie ça, on peut faire de bons chiffres à court terme, mais on la tue à long terme. C’est pour ça qu’on s’engage à donner de la perspective, pour bâtir des marques influentes.
+           Notre curiosité nourrit notre créativité. On reste humbles et on dit non aux gros egos, même le vôtre. Une marque est vivante. Elle a des valeurs, une personnalité, une histoire. Si on oublie ça, on peut faire de bons chiffres à court terme, mais on la tue à long terme. C’est pour ça qu’on s’engage à donner de la perspective, pour bâtir des marques influentes.
         </p>
       </div>
       </div>
@@ -108,9 +105,49 @@ alt="" />
 
 
 
-    <div className="section2  h-screen">
-      
+<div className="section2 text-black px-6 md:px-40 py-24 font-[font2]">
+
+ 
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 mb-5 lg:mb-40">
+    
+   
+    <h2 className="text-3xl">Expertise</h2>
+
+    
+    <div className="text-3xl  leading-[2.2rem]">
+      <p>Stratégie</p>
+      <p>Publicité</p>
+      <p>Branding</p>
+      <p>Design</p>
+      <p>Contenu</p>
     </div>
+    
+
+  </div>
+
+  
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-20 text-base leading-relaxed">
+    
+    <p className="text-2xl">
+      Nos projets_ naissent dans l’humilité, grandissent dans la curiosité
+      et vivent grâce à la créativité sous toutes ses formes.
+    </p>
+
+    <p className="text-2xl">
+      Notre création_ bouillonne dans un environnement où le talent a le goût
+      d’exploser. Où on se sent libre d’être la meilleure version de soi-même.
+    </p>
+
+    <p className="text-2xl">
+      Notre culture_ c’est l’ouverture aux autres. Point. Tout l’équipage
+      participe à bâtir une agence dont on est fiers.
+    </p>
+
+  </div>
+
+</div>
+
+    
 
  </div>
    
